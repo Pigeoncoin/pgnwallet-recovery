@@ -851,7 +851,7 @@
                 // query Insight Lite for balance
                 // convert from sats to whole ltc + append LTC
                 var baseURL = "https://api.chainmapper.com/PGN/getbalance/" + address + "/";
-                var balance;
+                var balance = "https://chainmapper.com/pgn/address/" + address;
                 $.ajax({
                     url: baseURL,
                     success: function(data) {
