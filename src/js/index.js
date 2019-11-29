@@ -559,13 +559,13 @@
     function getDerivationPath() {
         if (bip44TabSelected()) {
             var purpose = parseIntNoNaN(DOM.bip44purpose.val(), 44);
-            var coin = parseIntNoNaN(DOM.bip44coin.val(), 0);
-            var account = parseIntNoNaN(DOM.bip44account.val(), 0);
+           // var coin = parseIntNoNaN(DOM.bip44coin.val(), 0);
+           // var account = parseIntNoNaN(DOM.bip44account.val(), 0);
             var change = parseIntNoNaN(DOM.bip44change.val(), 0);
             var path = "m/";
             path += purpose + "'/";
-            path += coin + "'/";
-            path += account + "'/";
+         //   path += coin + "'/";
+         //   path += account + "'/";
             path += change;
             DOM.bip44path.val(path);
             var derivationPath = DOM.bip44path.val();
@@ -574,13 +574,13 @@
         }
         else if (bip49TabSelected()) {
             var purpose = parseIntNoNaN(DOM.bip49purpose.val(), 49);
-            var coin = parseIntNoNaN(DOM.bip49coin.val(), 0);
-            var account = parseIntNoNaN(DOM.bip49account.val(), 0);
+          //  var coin = parseIntNoNaN(DOM.bip49coin.val(), 0);
+          //  var account = parseIntNoNaN(DOM.bip49account.val(), 0);
             var change = parseIntNoNaN(DOM.bip49change.val(), 0);
             var path = "m/";
             path += purpose + "'/";
-            path += coin + "'/";
-            path += account + "'/";
+          //  path += coin + "'/";
+          //  path += account + "'/";
             path += change;
             DOM.bip49path.val(path);
             var derivationPath = DOM.bip49path.val();
@@ -589,13 +589,13 @@
         }
         else if (bip84TabSelected()) {
             var purpose = parseIntNoNaN(DOM.bip84purpose.val(), 84);
-            var coin = parseIntNoNaN(DOM.bip84coin.val(), 0);
-            var account = parseIntNoNaN(DOM.bip84account.val(), 0);
+          //  var coin = parseIntNoNaN(DOM.bip84coin.val(), 0);
+          //  var account = parseIntNoNaN(DOM.bip84account.val(), 0);
             var change = parseIntNoNaN(DOM.bip84change.val(), 0);
             var path = "m/";
             path += purpose + "'/";
-            path += coin + "'/";
-            path += account + "'/";
+          //  path += coin + "'/";
+          //  path += account + "'/";
             path += change;
             DOM.bip84path.val(path);
             var derivationPath = DOM.bip84path.val();
