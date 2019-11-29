@@ -14,7 +14,7 @@
     var showBalance = true;
     var showPrivKey = true;
     var showQr = false;
-    var litecoinUseLtub = true;
+    var litecoinUseLtub = false;
 
     var entropyChangeTimeoutEvent = null;
     var phraseChangeTimeoutEvent = null;
@@ -1520,7 +1520,7 @@
             name: "PGN - PigeonCoin",
             segwitAvailable: true,
             onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.litecoin;
+                network = bitcoinjs.bitcoin.networks.pigeoncoin;
                 setHdCoin(2);
                 DOM.litecoinLtubContainer.removeClass("hidden");
             },
