@@ -15,7 +15,7 @@
         <div class="container">
 		<br>&nbsp;<br>
             <center><img src="pgn.jpg" height="100"></center>
-            <h1 class="text-center">Wallet Recovery</h1>
+            <h1 class="text-center">Mobile Wallet Recovery</h1>
             <p class="version">v0.1.0</p>
             <hr>
             <div class="row">
@@ -23,7 +23,7 @@
                     <form class="form-horizontal" role="form">
 
                         <div class="form-group">
-                            <label for="phrase" class="col-sm-2 control-label">Enter Paper Key</label>
+                            <label for="phrase" class="col-sm-2 control-label">Enter Paper Key<br>(12 Word Seed Phrase)</label>
                             <div class="col-sm-10">
                                 <textarea id="phrase" class="phrase form-control" data-show-qr></textarea>
                             </div>
@@ -68,11 +68,11 @@
                     <h2>Derivation Path</h2>
                     <ul class="derivation-type nav nav-tabs" role="tablist">
                         <li id="bip32-tab" class="active">
-                            <a href="#bip32" role="tab" data-toggle="tab">BIP32</a>
+                            <a href="#bip32" role="tab" data-toggle="tab">BIP32 - Pre x21s Fork</a>
                         </li>
                       <!-- LOSHAN: code below is commented out as loaf currently doesn't support anything other than bip32 -->
                         <li id="bip44-tab">
-                            <a href="#bip44" role="tab" data-toggle="tab">BIP44</a>
+                            <a href="#bip44" role="tab" data-toggle="tab">BIP44 - Post x21s Fork</a>
                         </li>
                         <!-- <li id="bip49-tab">
                             <a href="#bip49" role="tab" data-toggle="tab">BIP49</a>
