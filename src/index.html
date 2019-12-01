@@ -7,15 +7,15 @@
         <link rel="stylesheet" href="css/app.css">
         <meta content="Mnemonic code for generating deterministic keys" name="description"/>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta content="bitcoin mnemonic converter" name="description" />
-        <meta content="Ian Coleman" name="author" />
+        <meta content="pigeoncoin mnemonic converter" name="description" />
+        <meta content="Farsider350" name="author" />
         <link type="image/x-icon" rel="icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" />
     </head>
     <body>
         <div class="container">
 		<br>&nbsp;<br>
             <center><img src="pgn.jpg" height="100"></center>
-            <h1 class="text-center">Wallet Recovery</h1>
+            <h1 class="text-center">Mobile Wallet Recovery</h1>
             <p class="version">v0.1.0</p>
             <hr>
             <div class="row">
@@ -23,7 +23,7 @@
                     <form class="form-horizontal" role="form">
 
                         <div class="form-group">
-                            <label for="phrase" class="col-sm-2 control-label">Enter Paper Key</label>
+                            <label for="phrase" class="col-sm-2 control-label">Enter Paper Key<br>(12 Word Seed Phrase)</label>
                             <div class="col-sm-10">
                                 <textarea id="phrase" class="phrase form-control" data-show-qr></textarea>
                             </div>
@@ -48,7 +48,7 @@
                                 <textarea id="root-key" class="root-key form-control" data-show-qr readonly></textarea>
                             </div>
                         </div>
-                        <div class="form-group litecoin-ltub-container">
+                        <!-- <div class="form-group litecoin-ltub-container">
                             <label for="litecoin-use-ltub" class="col-sm-2 control-label">Prefixes</label>
                             <div class="col-sm-10 checkbox">
                                 <label>
@@ -56,7 +56,7 @@
                                     Select for PigeonCoin
                                 </label>
                             </div>
-                        </div>
+                        </div>-->
                     </form>
                 </div>
             </div>
@@ -68,13 +68,13 @@
                     <h2>Derivation Path</h2>
                     <ul class="derivation-type nav nav-tabs" role="tablist">
                         <li id="bip32-tab" class="active">
-                            <a href="#bip32" role="tab" data-toggle="tab">BIP32</a>
+                            <a href="#bip32" role="tab" data-toggle="tab">BIP32 - Pre x21s Fork</a>
                         </li>
                       <!-- LOSHAN: code below is commented out as loaf currently doesn't support anything other than bip32 -->
-                        <!-- <li id="bip44-tab">
-                            <a href="#bip44" role="tab" data-toggle="tab">BIP44</a>
+                        <li id="bip44-tab">
+                            <a href="#bip44" role="tab" data-toggle="tab">BIP44 - Post x21s Fork</a>
                         </li>
-                        <li id="bip49-tab">
+                        <!-- <li id="bip49-tab">
                             <a href="#bip49" role="tab" data-toggle="tab">BIP49</a>
                         </li>
                         <li id="bip84-tab">
@@ -106,7 +106,7 @@
                           </form>
                       </div>
                       <!-- LOSHAN: code below is commented out as loaf currently doesn't support anything other than bip32 -->
-                        <!-- <div id="bip44" class="tab-pane">
+                        <div id="bip44" class="tab-pane">
                             <form class="form-horizontal" role="form">
                                 <br>
                                 <div class="col-sm-2"></div>
@@ -121,10 +121,10 @@
                                         <a href="https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki#purpose" target="_blank">Purpose</a>
                                     </label>
                                     <div class="col-sm-10">
-                                        <input id="purpose" type="text" class="purpose form-control" value="44" readonly>
+                                        <input id="purpose" type="text" class="purpose form-control" value="BIP44" readonly>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label for="coin" class="col-sm-2 control-label">
                                         <a href="https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki#registered-coin-types" target="_blank">Coin</a>
                                     </label>
@@ -147,7 +147,7 @@
                                     <div class="col-sm-10">
                                         <input id="change" type="text" class="change form-control" value="0">
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">
                                     </label>
@@ -181,7 +181,7 @@
                                 <div class="form-group">
                                     <label for="bip44-path" class="col-sm-2 control-label">BIP32 Derivation Path</label>
                                     <div class="col-sm-10">
-                                        <input id="bip44-path" type="text" class="path form-control" value="m/44'/0'/0'/0" readonly="readonly">
+                                        <input id="bip44-path" type="text" class="path form-control" value="m/44'/0" readonly="readonly">
                                     </div>
                                 </div>
                             </form>
@@ -392,7 +392,7 @@
                                     </div>
                                 </div>
                             </form>
-                        </div> -->
+                        </div>
                     </div>
                     <form class="form-horizontal" role="form">
                         <div class="form-group">
@@ -460,7 +460,7 @@
                 </div>
             </div>
             <span>Show</span>
-            <input type="number" class="rows-to-add" value="20">
+            <input type="number" class="rows-to-add" value="2">
             <button class="more">more rows</button>
             <span>starting from index</span>
             <input type="number" class="more-rows-start-index">
@@ -474,7 +474,7 @@
                     <h2>Offline Usage</h2>
 
                     <p>
-                    You can use this tool without having to be online. However balance's will not be displayed.
+                    You can use this tool without having to be online.
                     </p>
                     <p>
                     In your browser, select file save-as, and save this page

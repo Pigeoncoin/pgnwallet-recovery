@@ -4,7 +4,7 @@ A tool for converting BIP39 mnemonic phrases to addresses and private keys.
 
 ## Online Version
 
-
+http://recovery.pigeoncoin.org
 
 ## Standalone offline version
 
@@ -30,13 +30,13 @@ The BIP32 keys can be used at [bip32.org](https://bip32.org) if desired.
 
 ## Making changes
 
-Please do not make modifications to `bip39-standalone.html`, since they will
+Please do not make modifications to `docs/index.html`, since they will
 be overwritten by `compile.py`.
 
 Make changes in `src/*`.
 
 Changes are applied during release using the command `python compile.py`, so
-please do not commit changes to `bip39-standalone.html`
+please do not commit changes to `docs/index.html`
 
 # Tests
 

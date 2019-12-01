@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html><head lang="en">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
+<html>
+    <head lang="en">
+        <meta charset="utf-8" />
         <title>Pigeon Wallet Tools</title>
         <style>/*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -6867,17 +6867,17 @@ button.close {
     font-family: monospace;
 }
 </style>
-        <meta content="Mnemonic code for generating deterministic keys" name="description">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="pigeon mnemonic converter" name="description">
-        <meta content="Farsider350" name="author">
-        <link type="image/x-icon" rel="icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=">
+        <meta content="Mnemonic code for generating deterministic keys" name="description"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="pigeoncoin mnemonic converter" name="description" />
+        <meta content="Farsider350" name="author" />
+        <link type="image/x-icon" rel="icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" />
     </head>
     <body>
         <div class="container">
 		<br>&nbsp;<br>
             <center><img src="pgn.jpg" height="100"></center>
-            <h1 class="text-center">Wallet Recovery</h1>
+            <h1 class="text-center">Mobile Wallet Recovery</h1>
             <p class="version">v0.1.0</p>
             <hr>
             <div class="row">
@@ -6885,32 +6885,32 @@ button.close {
                     <form class="form-horizontal" role="form">
 
                         <div class="form-group">
-                            <label for="phrase" class="col-sm-2 control-label">Enter Paper Key</label>
+                            <label for="phrase" class="col-sm-2 control-label">Enter Paper Key<br>(12 Word Seed Phrase)</label>
                             <div class="col-sm-10">
-                                <textarea id="phrase" class="phrase form-control" data-show-qr="">hood grass dolphin tool method maid ribbon boat process wink leave flag</textarea>
+                                <textarea id="phrase" class="phrase form-control" data-show-qr></textarea>
                             </div>
                         </div>
-                        <!--<div class="form-group">
+                        <div class="form-group">
                             <label for="seed" class="col-sm-2 control-label">BIP39 Seed</label>
                             <div class="col-sm-10">
                                 <textarea id="seed" class="seed form-control" readonly="readonly" data-show-qr></textarea>
                             </div>
-                        </div>-->
+                        </div>
                         <div class="form-group">
                             <label for="network-phrase" class="col-sm-2 control-label">Coin</label>
                             <div class="col-sm-10">
                                 <select id="network-phrase" class="network form-control">
                                     <!-- populated by javascript -->
-                                <option value="0" selected="selected">PGN - PigeonCoin</option></select>
+                                </select>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="root-key" class="col-sm-2 control-label">BIP32 Root Key</label>
                             <div class="col-sm-10">
-                                <textarea id="root-key" class="root-key form-control" data-show-qr="" readonly="readonly">2oFskQ7gQyDcMmsjMjBaMaCehvND64J1P737teUG6nqFNWkxnPYLaxoJGCJfNyhRooLYA2XdVhMnUcwtbU38YSjBxUdpupZ3ean3X1ALUwu29AGb</textarea>
+                                <textarea id="root-key" class="root-key form-control" data-show-qr readonly></textarea>
                             </div>
                         </div>
-                       <!-- <div class="form-group litecoin-ltub-container">
+                        <!-- <div class="form-group litecoin-ltub-container">
                             <label for="litecoin-use-ltub" class="col-sm-2 control-label">Prefixes</label>
                             <div class="col-sm-10 checkbox">
                                 <label>
@@ -6930,13 +6930,13 @@ button.close {
                     <h2>Derivation Path</h2>
                     <ul class="derivation-type nav nav-tabs" role="tablist">
                         <li id="bip32-tab" class="active">
-                            <a href="#bip32" role="tab" data-toggle="tab">BIP32</a>
+                            <a href="#bip32" role="tab" data-toggle="tab">BIP32 - Pre x21s Fork</a>
                         </li>
                       <!-- LOSHAN: code below is commented out as loaf currently doesn't support anything other than bip32 -->
-                        <!-- <li id="bip44-tab">
-                            <a href="#bip44" role="tab" data-toggle="tab">BIP44</a>
+                        <li id="bip44-tab">
+                            <a href="#bip44" role="tab" data-toggle="tab">BIP44 - Post x21s Fork</a>
                         </li>
-                        <li id="bip49-tab">
+                        <!-- <li id="bip49-tab">
                             <a href="#bip49" role="tab" data-toggle="tab">BIP49</a>
                         </li>
                         <li id="bip84-tab">
@@ -6956,19 +6956,19 @@ button.close {
                                   <div class="col-sm-10">
                                       <select id="bip32-client" class="client form-control">
                                           <!-- populated by javascript -->
-                                      <option value="0" selected="selected">PigeonWallet</option><option value="1">PigeonWallet (change)</option></select>
+                                      </select>
                                   </div>
                               </div>
                               <div class="form-group">
                                   <label for="bip32-path" class="col-sm-2 control-label">BIP32 Derivation Path</label>
                                   <div class="col-sm-10">
-                                      <input id="bip32-path" type="text" class="path form-control" value="m/0'/0" readonly="readonly">
+                                      <input id="bip32-path" type="text" class="path form-control" value="m/0'/0" readonly>
                                   </div>
                               </div>
                           </form>
                       </div>
                       <!-- LOSHAN: code below is commented out as loaf currently doesn't support anything other than bip32 -->
-                        <!-- <div id="bip44" class="tab-pane">
+                        <div id="bip44" class="tab-pane">
                             <form class="form-horizontal" role="form">
                                 <br>
                                 <div class="col-sm-2"></div>
@@ -6983,10 +6983,10 @@ button.close {
                                         <a href="https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki#purpose" target="_blank">Purpose</a>
                                     </label>
                                     <div class="col-sm-10">
-                                        <input id="purpose" type="text" class="purpose form-control" value="44" readonly>
+                                        <input id="purpose" type="text" class="purpose form-control" value="BIP44" readonly>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <!-- <div class="form-group">
                                     <label for="coin" class="col-sm-2 control-label">
                                         <a href="https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki#registered-coin-types" target="_blank">Coin</a>
                                     </label>
@@ -7009,7 +7009,7 @@ button.close {
                                     <div class="col-sm-10">
                                         <input id="change" type="text" class="change form-control" value="0">
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">
                                     </label>
@@ -7043,7 +7043,7 @@ button.close {
                                 <div class="form-group">
                                     <label for="bip44-path" class="col-sm-2 control-label">BIP32 Derivation Path</label>
                                     <div class="col-sm-10">
-                                        <input id="bip44-path" type="text" class="path form-control" value="m/44'/0'/0'/0" readonly="readonly">
+                                        <input id="bip44-path" type="text" class="path form-control" value="m/44'/0" readonly="readonly">
                                     </div>
                                 </div>
                             </form>
@@ -7254,19 +7254,19 @@ button.close {
                                     </div>
                                 </div>
                             </form>
-                        </div> -->
+                        </div>
                     </div>
                     <form class="form-horizontal" role="form">
                         <div class="form-group">
                             <label for="extended-priv-key" class="col-sm-2 control-label">BIP32 Extended Private Key</label>
                             <div class="col-sm-10">
-                                <textarea id="extended-priv-key" class="extended-priv-key form-control" readonly="readonly" data-show-qr="">2oFskQBs4dYqEifZhLb1ruWca9Reh9QrbJqZ1cEQJqDwnNaWh8SvccUDFUwNEXAChDftYVLHQ3MXbuAJj9ZANcuCeKhPpJtKZha1Wx79KEoMsNHL</textarea>
+                                <textarea id="extended-priv-key" class="extended-priv-key form-control" readonly="readonly" data-show-qr></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="extended-pub-key" class="col-sm-2 control-label">BIP32 Extended Public Key</label>
                             <div class="col-sm-10">
-                                <textarea id="extended-pub-key" class="extended-pub-key form-control" readonly="readonly" data-show-qr="">2oFskQBs4dYqEifZhLb1ruWca9Reh9QrbJqZ1cEQJqDwnNaWh8SvccUDFUwNEXEdqgHYCYrX1nFRAvPCA9kpUgfWUMsx62FDKcocLGEmiNbFQUqW</textarea>
+                                <textarea id="extended-pub-key" class="extended-pub-key form-control" readonly="readonly" data-show-qr></textarea>
                             </div>
                         </div>
                     </form>
@@ -7284,7 +7284,7 @@ button.close {
                         <div class="col-md-12">
                             <table class="table table-striped">
                                 <thead>
-                                    <tr><th>
+                                    <th>
                                         <div class="input-group">
                                             <span>Path</span>&nbsp;&nbsp;
                                             <button class="index-toggle">Toggle</button>
@@ -7308,18 +7308,14 @@ button.close {
                                             <button class="balance-toggle">Toggle</button>
                                         </div>
                                     </th>
-                                </tr></thead>
-                                <tbody class="addresses monospace"><tr>
-                <td class="index"><span>m/0'/0/0</span></td>
-                <td class="address"><span data-show-qr="">PWPrFP8b7eQUCRR87CxuroehXxG3pM5yiM</span></td>
-                <td class="privkey"><span data-show-qr="" class="">KwwGgDJA6g4ypcmkmWmhqDaqfoHMqtcwPgV5seqybrRh48sWv2gK</span></td>
-                <td class="balance"><span class="">https://chainmapper.com/pgn/address/PWPrFP8b7eQUCRR87CxuroehXxG3pM5yiM</span></td>
-            </tr><tr>
-                <td class="index"><span>m/0'/0/1</span></td>
-                <td class="address"><span data-show-qr="">PBPoCKh5yeSG9AowQa6afUqN8Y1FGFMRfw</span></td>
-                <td class="privkey"><span data-show-qr="" class="">L2aNYEJxV9zLRB9P1T5LgSYuo5o9oFQ2vJFVQPJjdAiJ8cHrVDZi</span></td>
-                <td class="balance"><span class="">https://chainmapper.com/pgn/address/PBPoCKh5yeSG9AowQa6afUqN8Y1FGFMRfw</span></td>
-            </tr></tbody>
+                                </thead>
+                                <tbody class="addresses monospace">
+                                    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                                    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                                    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                                    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                                    <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -7418,17 +7414,17 @@ button.close {
 
         </div>
 
-        <div class="qr-container">
+        <div class="qr-container hidden">
             <div class="qr-hint bg-primary hidden">Click field to hide QR</div>
             <div class="qr-hint bg-primary">Click field to show QR</div>
             <div class="qr-hider hidden">
-                <div class="qr-image"><canvas width="310" height="310" style="width: 310px; height: 310px;"></canvas></div>
+                <div class="qr-image"></div>
                 <div class="qr-warning bg-primary">Caution: Scanner may keep history</div>
             </div>
         </div>
 
         <div class="feedback-container">
-            <div class="feedback" style="display: none;"></div>
+            <div class="feedback">Loading...</div>
         </div>
 
         <script type="text/template" id="address-row-template">
@@ -106455,13 +106451,13 @@ window.Entropy = new (function() {
     function getDerivationPath() {
         if (bip44TabSelected()) {
             var purpose = parseIntNoNaN(DOM.bip44purpose.val(), 44);
-            var coin = parseIntNoNaN(DOM.bip44coin.val(), 0);
-            var account = parseIntNoNaN(DOM.bip44account.val(), 0);
+           // var coin = parseIntNoNaN(DOM.bip44coin.val(), 0);
+           // var account = parseIntNoNaN(DOM.bip44account.val(), 0);
             var change = parseIntNoNaN(DOM.bip44change.val(), 0);
             var path = "m/";
             path += purpose + "'/";
-            path += coin + "'/";
-            path += account + "'/";
+         //   path += coin + "'/";
+         //   path += account + "'/";
             path += change;
             DOM.bip44path.val(path);
             var derivationPath = DOM.bip44path.val();
@@ -106470,13 +106466,13 @@ window.Entropy = new (function() {
         }
         else if (bip49TabSelected()) {
             var purpose = parseIntNoNaN(DOM.bip49purpose.val(), 49);
-            var coin = parseIntNoNaN(DOM.bip49coin.val(), 0);
-            var account = parseIntNoNaN(DOM.bip49account.val(), 0);
+          //  var coin = parseIntNoNaN(DOM.bip49coin.val(), 0);
+          //  var account = parseIntNoNaN(DOM.bip49account.val(), 0);
             var change = parseIntNoNaN(DOM.bip49change.val(), 0);
             var path = "m/";
             path += purpose + "'/";
-            path += coin + "'/";
-            path += account + "'/";
+          //  path += coin + "'/";
+          //  path += account + "'/";
             path += change;
             DOM.bip49path.val(path);
             var derivationPath = DOM.bip49path.val();
@@ -106485,13 +106481,13 @@ window.Entropy = new (function() {
         }
         else if (bip84TabSelected()) {
             var purpose = parseIntNoNaN(DOM.bip84purpose.val(), 84);
-            var coin = parseIntNoNaN(DOM.bip84coin.val(), 0);
-            var account = parseIntNoNaN(DOM.bip84account.val(), 0);
+          //  var coin = parseIntNoNaN(DOM.bip84coin.val(), 0);
+          //  var account = parseIntNoNaN(DOM.bip84account.val(), 0);
             var change = parseIntNoNaN(DOM.bip84change.val(), 0);
             var path = "m/";
             path += purpose + "'/";
-            path += coin + "'/";
-            path += account + "'/";
+          //  path += coin + "'/";
+          //  path += account + "'/";
             path += change;
             DOM.bip84path.val(path);
             var derivationPath = DOM.bip84path.val();
@@ -106746,7 +106742,7 @@ window.Entropy = new (function() {
                 }
                 // query Insight Lite for balance
                 // convert from sats to whole ltc + append LTC
-                var baseURL = "https://api.chainmapper.com/PGN/getbalance/" + address + ".json";
+                var baseURL = "https://api.chainmapper.com/PGN/getbalance/" + address + "/";
                 var balance = "https://chainmapper.com/pgn/address/" + address;
                 $.ajax({
                     url: baseURL,
@@ -107444,6 +107440,5 @@ window.Entropy = new (function() {
 
 })();
 </script>
-    
-
-</body></html>
+    </body>
+</html>
